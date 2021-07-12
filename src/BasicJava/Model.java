@@ -3,13 +3,18 @@ package BasicJava;
 public class Model {
     private StringBuilder sentences = new StringBuilder();
 
-    public String getSentence() {
-        return sentences.toString();
+    public Model() {
     }
-    public void append(String word){
-        sentences.append(word);
-        if(word.equals("Hello")){
-            sentences.append(" ");
+
+    public String getSentence() {
+        return this.sentences.toString();
+    }
+
+    public void append(String word) {
+        this.sentences.append(word);
+        if (word.equals("Hello")) {
+            this.sentences.append(" ");
         }
+
     }
 }

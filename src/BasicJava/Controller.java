@@ -14,21 +14,21 @@ public class Controller implements words {
 
     public void startProcess() throws IOException {
         Scanner scanner1 = new Scanner(System.in);
+
         String word1;
-
-        while (!(word1 = scanner1.nextLine()).equals("Hello")) {
-            view.printMistake(NOT_THAT_WORD);
+        while(!(word1 = scanner1.nextLine()).equals("Hello")) {
+            this.view.printMistake("Enter another word");
         }
-        model.append(word1);
+
+        this.model.append(word1);
+
         String word2;
-        while (!(word2 = scanner1.nextLine()).equals("world!")) {
-            view.printMistake(NOT_THAT_WORD);
+        while(!(word2 = scanner1.nextLine()).equals("world!")) {
+            this.view.printMistake("Enter another word");
         }
-        model.append(word2);
 
-        view.printResult(model.getSentence());
+        this.model.append(word2);
+        this.view.printResult(this.model.getSentence());
     }
-
 }
-
 
